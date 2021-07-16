@@ -10,6 +10,7 @@
   "author": "rajat sran",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.1",
     "postman-request": "^2.88.1-postman.30"
   }
 }
