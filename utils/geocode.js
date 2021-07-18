@@ -1,8 +1,8 @@
 const request = require('postman-request');
 
 const geourl = (address, callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?access_token=pk.eyJ1IjoicmFqYXRzcmFuIiwiYSI6ImNrcjYwdXJsYTAxamMycXBnZHJ5ZDd1ZzcifQ.Ru40dK_96iiuCuD6zGIyew&limit=1'
-    request({ url: url, json: true }, (error, response) => {
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoicmFqYXRzcmFuIiwiYSI6ImNrcjYwdXJsYTAxamMycXBnZHJ5ZDd1ZzcifQ.Ru40dK_96iiuCuD6zGIyew&limit=1'
+    request({ url, json: true }, (error, response) => {
         if (error) {
             callback('unable to connect to service', undefined)
         } else if (response.body.features[0].length === 0) {
