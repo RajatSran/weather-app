@@ -4,15 +4,21 @@
 
 <head>
     <link rel="stylesheet" href="/webservers1/public/css/styles.css">
-    <script src="/js/app.js"></script>
+   
 </head>
 
 <body>
     <div class='main-content'>
         {{>header}}
-        {{>footer}}
-    </div>
+        <p>use this site to know weather</p>
+        <form action="">
+            <input type="text" placeholder="location">
+            <button>search</button>
+        </form>
 
+    </div>
+    {{>footer}}
+     <script src="/js/app.js"></script>
 </body>
 
 </html>
